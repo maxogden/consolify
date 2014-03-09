@@ -25,7 +25,15 @@ Options:
 -r, --reload   Auto reload on change
 ```
 
-See the [browser-reload][] documentation for details on `--reload`.
+See the [browser-reload][] documentation for details on `--reload`.  
+
+## Run the tests
+
+```js
+npm install jslint phantomjs -g
+npm install
+npm test
+```
 
 ## Browserify & Mocha
 

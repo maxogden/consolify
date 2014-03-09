@@ -1,30 +1,45 @@
 {
-  "name"            : "consolify",
-  "version"         : "0.7.0",
-  "keywords"        : ["browser", "console"],
-  "description"     : "Turn your browser window into a console",
-  "author"          : "Maximilian Antoni (http://maxantoni.de)",
-  "homepage"        : "https://github.com/mantoni/consolify",
-  "main"            : "./lib/consolify.js",
-  "bin"             : "bin/cmd.js",
-  "engines"         : {
-    "node"          : ">=0.8"
+  "name": "consolify",
+  "version": "0.7.0",
+  "keywords": [
+    "browser",
+    "console"
+  ],
+  "description": "Turn your browser window into a console",
+  "author": "Maximilian Antoni (http://maxantoni.de)",
+  "homepage": "https://github.com/mantoni/consolify",
+  "main": "./lib/consolify.js",
+  "bin": "bin/cmd.js",
+  "engines": {
+    "node": ">=0.8"
   },
-  "scripts"         : {
-    "start"         : "mocha --watch",
-    "test"          : "make test"
+  "scripts": {
+    "start": "mocha --watch",
+    "test": "make test"
   },
-  "dependencies"    : {
-    "through"       : "~2.3.4",
-    "browser-reload": "~1.0.1"
+  "browserify": {
+    "transform": [
+      "brfs"
+    ]
   },
-  "devDependencies" : {
-    "mocha"         : ">=1.17 <2"
+  "dependencies": {
+    "through": "~2.3.4",
+    "browser-reload": "~1.0.1",
+    "brfs": "~1.0.0"
   },
-  "repository"      : {
-    "type"          : "git",
-    "url"           : "https://github.com/mantoni/consolify.git"
+  "devDependencies": {
+    "mocha": ">=1.17 <2"
   },
-  "files"           : ["bin", "lib", "README.md", "CHANGES.md", "LICENSE"],
-  "license"         : "MIT"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mantoni/consolify.git"
+  },
+  "files": [
+    "bin",
+    "lib",
+    "README.md",
+    "CHANGES.md",
+    "LICENSE"
+  ],
+  "license": "MIT"
 }

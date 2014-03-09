@@ -22,4 +22,4 @@ argv.forEach(function (a, i) {
   }
 });
 
-consolify(process.stdin, options).pipe(process.stdout);
+process.stdin.pipe(consolify(options)).pipe(process.stdout);
